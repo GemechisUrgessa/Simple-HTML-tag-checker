@@ -1,7 +1,7 @@
 filename = input("Please enter HTML file name here: ")
 #here we create dictionary which will hold our tags.
 dict = {"<html>":"</html>","<br>":"0","<hr>":"0","<body>":"</body>","<pre":"</pre>","<style>":"</style>","<title>":"</title>","<head>":"</head>","<table>":"</table","<thead>":"</thead>","<tr>":"</tr","<td>":"</td","<tbody>":"</tbody>","<ul>":"</ul>","<li>":"</li>","<strong>":"</strong>"}
-#here we create a list to append aour tages
+#here we create a list to append our tag's
 list_1=[]
 #here goes our list which will hold the file strings
 list_2= []
@@ -38,7 +38,7 @@ for i in list_2:
         #here we append closed tags one by one then delete both the closed tag with its open one, so we use 
         if i in dict.values():
             list_1.append(i)
-            # num_1 is used to refer to the index of lastly enterd open tag of our closed tag
+            # num_1 is used to refer to the index of lastly entered open tag of our closed tag
             #num_2 is used for deleting both open tag and closed tag that are at the end index
             index_1 = -2
             index_2 = -1
@@ -57,7 +57,7 @@ for i in list_2:
         list_3.append(i)
     elif i[0] == "<" and i[1] == "/":
         list_3.append(i)
-        # here we use the indexs to comper letters of the tags and see if the tag is closed so we use [0][1] to refer to the second element of the first list and [-1][2] for the 3rd element of the last list 
+        # here we use the indexes to comper letters of the tags and see if the tag is closed so we use [0][1] to refer to the second element of the first list and [-1][2] for the 3rd element of the last list 
         index_1 = 0
         index_2 = 1
         index_3 = -1
